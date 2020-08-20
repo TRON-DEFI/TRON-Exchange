@@ -1,0 +1,42 @@
+run_mode: debug     # debug, release, test
+addr: :9100
+name: stmDivider
+url: http://127.0.0.1:9100
+max_ping_count: 10
+jwt_secret: Rtg8BPKNEf2mB4mgvKONGPZZQSaJWNLijxR42qRgq0iBb5
+
+log:
+  writers: file,stdout
+  logger_level: INFO
+  logger_file: logs/stmDivider.log
+  log_format_text: false
+  rollingPolicy: size
+  log_rotate_date: 1
+  log_rotate_size: 50
+  log_backup_count: 7
+
+db_write:
+  schema: blockchain
+  host: 127.0.0.1
+  port: 3306
+  username: miner
+  password: digDIG
+db_read:
+  schema: blockchain
+  host: 127.0.0.1
+  port: 3306
+  username: miner
+  password: digDIG
+
+redis:
+  host: 127.0.0.1:6379
+  index: 0
+  poolSize: 10
+  pass:
+
+smart:
+  poolAddress: TL8yyNR9vC767yBtZ7GmyoKX6PTGAd2pvg
+  poolPrivateKey: KKK6xN7j9/a9luECH9yjwgypxuxOLyC5Wp+gJKbCICUW2JFg31aur75TWsC2fOBKgdBJEHo3vgtlUEK0I5PVz5phFR+nu5sI26LbYg3Jr40=
+  contractAddress: TVHmsZ6WrA44NYrEYideSRhW6ZeyjxKH8C
+  ownerAddress: TKaTjCYPyU3NZWgGckQEVJyb4N6c82gfcU
+  privateKey: UX04V+Zc0PfrFSjzIlD5/O2NiyMg1cvp00RYIhCzPw7mdi0xf8zn2uh6TBoBGmX1sgi6mcivspvGPj9K3U24fF/kyfXv0rOcxcSudp40+fU=

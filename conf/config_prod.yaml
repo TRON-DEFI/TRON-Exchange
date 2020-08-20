@@ -1,0 +1,52 @@
+run_mode: release     # debug, release, test
+addr: :21110
+name: tradehome-service
+url: http://127.0.0.1:21110
+max_ping_count: 10
+jwt_secret: Rtg8BPKNEf2mB4mgvKONGPZZQSaJWNLijxR42qRgq0iBb5
+
+log:
+  writers: file,stdout
+  logger_level: INFO
+  logger_file: logs/tradehome-service.log
+  log_format_text: false
+  rollingPolicy: size
+  log_rotate_date: 1
+  log_rotate_size: 50
+  log_backup_count: 7
+
+db_write:
+  schema: tradehome
+  host: 18.224.38.197
+  port: 3306
+  username: root
+  password: root
+db_read:
+  schema: tradehome
+  host: 18.224.38.197
+  port: 3306
+  username: root
+  password: root
+
+redis:
+  host: 127.0.0.1:7801
+  index: 0
+  poolSize: 10
+  pass:
+
+smart:
+  testNet: 1
+  eventLogURL:
+  smartNode: grpc.shasta.trongrid.io:50051
+  contractAddress: TAho6ZSd5JnSKwm62Kqe6VNiGwSNhHHXud
+  ownerAddress: TVRij7zDSnYyepw1oW4VfndksAibyYsvwa
+  privateKey:
+  contractAddress10:
+  privateKey10:
+  ownerAddress10:
+
+mine:
+  rate: 1000
+  contractAddress: TNvnkxXoJRJ2iVZrW7Q5QqDbwRTFg3ppPZ
+  ownerAddress: TTgRFvHRAhyrmeWDKTcD5EekLdkLzsuRHY
+  privateKey: HShCbFc2ybF1vtKW4XWjUlK23qA2RJUSR/5Man1s/ngzUHCv1enGKGeIIs4UbG/i6BV6qNNAi7kSlcJvkFRXOsPu95Wz+C2HzAYwgtnOFes=
